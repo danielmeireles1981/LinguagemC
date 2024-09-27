@@ -1,0 +1,50 @@
+Alguns detalhes de Herança
+--------------------------
+
+	As classes derivadas podem modificar a acessibilidade por seus
+membros herdados. Sintase:
+
+	class classeDerivade: MododeAcesso classePai 
+
+onde MododeAcesso pode ser public ou private.
+
+	Os membors públicos e protegidos de uma classe base tambem sao
+publicos e protegidos na classe derivada publica.
+	Os membros publicos e protegidos de uma base sao private em uma
+classe derivada private.
+
+No programa temos bclasses
+
+       	---------
+	|POSICAO|
+    	---------
+	    |
+	---------
+	| PONTO |
+    	---------
+	    |
+	---------
+	|CIRCULO|
+    	---------
+	
+Classe Posicao
+	Protegido: x,y
+	Public: getx.
+		gety.
+		posicao.
+	
+Classe Ponto derivada publica de Posicao
+	Protegido: visivel
+	Public:	Ponto(x,y)
+		Mostra,Esconde,EhVisivel,
+		MovePara.
+
+Circulo: derivada private de Ponto:
+
+OBS: Todos os dados publicos e protegidos do Pai tornam-se private:
+	Private: raio
+	Public: Circulo		|	Expande
+		Mostra 		|	Esconde
+  		Esconde		|	MovePara
+					Contrai
+		
